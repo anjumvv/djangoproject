@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/user/saveContact" method="POST">
+  {% csrf_token %}
+ <table>
+
+ {{ contactForm.as_table }}
+
+
+ <tr>
+     <td>
+         <input type="submit" value="Submit">
+     </td>
+ </tr>
+ </table>
+</form>
+</form>
+</body>
+</html>

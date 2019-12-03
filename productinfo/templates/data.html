@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getData (){
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "productdata", true);
+	        xhttp.onreadystatechange = function() {
+	        if (this.readyState == 4 && this.status == 200) {
+                 var x= document.getElementById("data");
+	    	     x.innerHTML= this.responseText;
+    	    }
+	      };
+    	  xhttp.send();
+    	}
+      function hello(){
+        var x= document.getElementById("data");
+        x.innerHTML = "<h1> HELLO ALL !!! </h1>";
+      }
+      function clearData (){
+            var x= document.getElementById("data");
+             x.innerHTML = "";
+
+        }
+
+    </script>
+</head>
+<body>
+This is my data page
+<div id="data"></div>
+<button onclick="getData()" >Click Me</button>
+<button onclick="hello()" > Click Me</button>
+<button onclick="clearData()" >Clear Me</button>
+
+</body>
+</html>

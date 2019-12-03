@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+
+
+    {%  for p in student %}
+
+
+    <tr>
+        <td>{{p.rollno}}</td>
+        <td>{{p.name}}</td>
+        <td><a href="/studentinformation/{{p.rollno}}">details</a></td>
+
+
+    </tr>
+
+
+    {% endfor %}
+</table>
+</body>
+</html>

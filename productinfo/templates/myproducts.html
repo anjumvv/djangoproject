@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% extends "myweb.html" %}
+
+{% block mytitle %}
+
+    Product page for {{name}}
+
+{%  endblock %}
+
+{%  block main %}
+<h1>these are my products</h1>
+<table border="1">
+
+
+    {%  for p in products %}
+
+
+
+    <tr>
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td><a href="/product/{{p.id}}">details</a></td>
+
+
+    </tr>
+
+
+    {% endfor %}
+
+
+
+</table>
+</body>
+</html>
+{%  endblock %}

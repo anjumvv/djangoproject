@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "myweb.html" %}
+
+{% block mytitle %}
+
+    Product List Page
+
+{%  endblock %}
+
+
+{%  block main %}
+this is my prodductinfo
+<table border="1">
+    <form action="/addToCart">
+    <tr>
+        <td>Name</td>
+        <td>{{name}}</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>{{desc}}</td>
+    </tr>
+    <tr>
+        <td>price</td>
+        <td>{{price}}</td>
+    </tr>
+          <tr>
+       <td>Qty</td>
+
+        <td>
+
+            <input type="text" name="qty">
+            <input type="hidden" name="pid" value="{{id}}">
+
+        </td>
+    </tr>
+
+    <tr>
+       <td></td>
+        <td><input type="submit" value="Add To Cart"></td>
+    </tr>
+
+    </form>
+</table>
+
+</body>
+</html>
+{% endblock %}
